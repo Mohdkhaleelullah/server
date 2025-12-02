@@ -1,0 +1,46 @@
+1. Build Image
+docker build -t redisnew .
+
+2. Run Container
+docker run --name myredisnew -d redisnew
+
+3. List running containers
+docker ps
+
+4. Stop container
+docker stop myredisnew
+
+5. Login to DockerHub
+docker login
+
+6. Show all containers
+docker ps -a
+
+7. Commit container to new image
+docker commit <container-id> username/redis1
+
+8. List images
+docker images
+
+9. Push image to Docker Hub
+docker push username/redis1
+
+10. Remove container
+docker rm <container-id>
+
+11. Remove image
+docker rmi username/redis1
+
+14. Pull uploaded image
+docker pull username/redis1
+
+15. Run pulled image
+docker run --name myredis -d username/redis1
+
+16. Enter redis CLI
+docker exec -it myredis redis-cli
+
+Test:
+SET name "Abcdef"
+GET name
+exit
